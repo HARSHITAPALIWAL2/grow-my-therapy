@@ -5,23 +5,23 @@ import { ArrowRight, ChevronDown, Menu, X } from 'lucide-react'
 
 const helpCards = [
   {
-    title: 'Individuals',
-    text: 'Create space for yourself, work through what feels heavy, and move toward a life that feels more like your own.',
-    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=900&q=85',
+    title: 'Anxiety & Panic Therapy',
+    text: "For the constant worry, racing thoughts, and tension that never quite switches off — we'll build practical tools to help you feel more regulated in daily life.",
+    image: "/img-1.png",
   },
   {
-    title: 'Couples',
-    text: 'Reconnect, communicate with more honesty, and build a relationship grounded in understanding and care.',
-    image: 'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=900&q=85',
+    title: 'Trauma Therapy (EMDR)',
+    text: 'Whether from a single event or long-standing patterns, EMDR helps you process the past at a careful, safe pace — so you can feel grounded in the present.',
+    image: "/img-2.png",
   },
   {
-    title: 'Families',
-    text: 'Find new ways to listen, support one another, and make room for meaningful change together.',
-    image: 'https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=900&q=85',
+    title: 'Burnout & Stress Therapy',
+    text: 'For entrepreneurs, creatives, and professionals who feel disconnected after years of pushing through — a space to slow down and reconnect.',
+    image: "/img-3.png",
   },
 ]
 
-const specialties = ['Anxiety', 'Depression', 'Life transitions', 'Relationship concerns', 'Trauma & healing', 'Self-esteem', 'Grief & loss', 'Parenting support']
+const specialties = ['Anxiety', 'Panic', 'Trauma & EMDR', 'Burnout', 'Stress Management', 'Perfectionism', 'Overthinking', 'Emotional Regulation']
 
 export default function Page() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -29,14 +29,15 @@ export default function Page() {
   return (
     <main className="site-shell">
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="Conejo Valley Counseling home">
-          <span className="brand-mark">CVC</span>
-          <span className="brand-name">Conejo Valley<br />Counseling</span>
+        <a className="brand" href="#top" aria-label="Dr. Maya Reynolds, PsyD home">
+          <span className="brand-mark">MR</span>
+          <span className="brand-name">Dr. Maya Reynolds<br />PsyD</span>
         </a>
         <nav className={menuOpen ? 'main-nav is-open' : 'main-nav'} aria-label="Main navigation">
           <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
-          <a href="#who-we-help" onClick={() => setMenuOpen(false)}>Who we help</a>
-          <a href="#expertise" onClick={() => setMenuOpen(false)}>Expertise</a>
+          <a href="#who-we-help" onClick={() => setMenuOpen(false)}>Services</a>
+          <a href="#expertise" onClick={() => setMenuOpen(false)}>Approach</a>
+          <a href="#office" onClick={() => setMenuOpen(false)}>Office</a>
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
           <a className="nav-cta" href="#contact" onClick={() => setMenuOpen(false)}>Get started <ArrowRight size={16} /></a>
         </nav>
@@ -47,10 +48,10 @@ export default function Page() {
 
       <section className="hero" id="top">
         <div className="hero-copy">
-          <p className="eyebrow">A softer place to land</p>
-          <h1>Make room for<br /><em>what matters.</em></h1>
-          <p className="hero-text">Thoughtful, compassionate therapy for individuals, couples, and families in the Conejo Valley and beyond.</p>
-          <a className="button button-dark" href="#contact">Begin your journey <ArrowRight size={16} /></a>
+          <p className="eyebrow">Anxiety, Trauma & Burnout Therapy in Santa Monica, CA</p>
+          <h1>Feel steady,<br /><em>not overwhelmed.</em></h1>
+          <p className="hero-text">Dr. Maya Reynolds, PsyD, helps high-achieving adults quiet the overthinking and process what's weighing on them — in-person in Santa Monica or via telehealth across California.</p>
+          <a className="button button-dark" href="#contact">Schedule a Consultation <ArrowRight size={16} /></a>
         </div>
         <div className="hero-art" aria-label="A peaceful, sunlit room with a chair and plants" role="img">
           <div className="sun-shape" />
@@ -59,24 +60,46 @@ export default function Page() {
           <div className="side-table"><span /></div>
           <div className="art-frame"><span /></div>
         </div>
-        <div className="hero-note">Therapy rooted in<br />presence and possibility <span>✦</span></div>
+        <div className="hero-note">Therapy rooted in<br />safety and self-trust <span>✦</span></div>
       </section>
 
-      <section className="intro-section" id="about">
-        <div className="section-label">01 / Our approach</div>
-        <div className="intro-content">
-          <h2>There is no one right way<br />to <em>feel better.</em></h2>
-          <div>
-            <p>Therapy is a collaborative process. Together, we’ll create a space where you can slow down, feel understood, and explore the parts of your story that are asking for attention.</p>
-            <a className="text-link" href="#contact">Learn more about our approach <ArrowRight size={15} /></a>
-          </div>
-        </div>
-      </section>
+     <section className="intro-section" id="about" style={{ paddingTop: '5rem', paddingBottom: '3rem' }}>
+  <div className="section-label">01 / About Dr. Reynolds</div>
+  <div
+    className="intro-content"
+    style={{
+      display: 'grid',
+      gridTemplateColumns: '280px 1fr',
+      gap: '3.5rem',
+      alignItems: 'center',
+      marginTop: '2rem',
+    }}
+  >
+    <img
+      src="/office-1.jpg"
+      alt="Dr. Maya Reynolds, PsyD"
+      style={{
+        width: '100%',
+        height: '360px',
+        objectFit: 'cover',
+        borderRadius: '16px',
+        boxShadow: '0 12px 30px rgba(0,0,0,0.12)',
+      }}
+    />
+    <div>
+      <h2 style={{ marginBottom: '1.25rem' }}>Warm, grounded,<br /><em>evidence-based care.</em></h2>
+      <p style={{ lineHeight: 1.75, marginBottom: '1.5rem' }}>
+        I'm a licensed clinical psychologist based in Santa Monica, working with adults who feel overwhelmed by anxiety, stress, or the lingering effects of past experiences — often while appearing "functional" on the outside. I integrate CBT, EMDR, mindfulness-based practices, and body-oriented techniques to help you feel more regulated, resilient, and like yourself again.
+      </p>
+      <a className="text-link" href="#contact">Learn more about my approach <ArrowRight size={15} /></a>
+    </div>
+  </div>
+</section>
 
       <section className="help-section" id="who-we-help">
         <div className="section-heading">
-          <div className="section-label">02 / Who we help</div>
-          <h2>Support for the<br /><em>whole picture.</em></h2>
+          <div className="section-label">02 / How I Can Help</div>
+          <h2>Support for what<br /><em>you're carrying.</em></h2>
         </div>
         <div className="help-grid">
           {helpCards.map((card) => (
@@ -89,24 +112,47 @@ export default function Page() {
       </section>
 
       <section className="expertise-section" id="expertise">
-        <div className="section-label">03 / Our expertise</div>
+        <div className="section-label">03 / My Approach</div>
         <div className="expertise-layout">
-          <h2>Care that meets<br />you <em>where you are.</em></h2>
-          <div className="expertise-copy"><p>Whether you’re navigating a season of change or simply want to understand yourself more deeply, our work is grounded in curiosity, warmth, and practical tools for moving forward.</p><a className="text-link" href="#specialties">Explore specialties <ArrowRight size={15} /></a></div>
+          <h2>Practical tools,<br /><em>real depth.</em></h2>
+          <div className="expertise-copy"><p>Sessions are structured enough to feel supportive, while leaving space for reflection. My goal isn't just symptom relief — it's helping you build real insight, resilience, and a stronger relationship with yourself over time.</p><a className="text-link" href="#specialties">Explore areas of focus <ArrowRight size={15} /></a></div>
         </div>
-        <div className="tag-list" aria-label="Areas of expertise"><span>Individual therapy</span><span>Couples therapy</span><span>Family therapy</span><span>Telehealth</span><span>In-person care</span></div>
+        <div className="tag-list" aria-label="Areas of expertise"><span>Anxiety & Panic</span><span>Trauma & EMDR</span><span>Burnout Recovery</span><span>Telehealth (CA)</span><span>In-person (Santa Monica)</span></div>
       </section>
 
       <section className="specialties-section" id="specialties">
-        <div className="section-label">04 / Specialties</div>
+        <div className="section-label">04 / Areas of Focus</div>
         <div className="specialties-layout"><h2>A place to begin<br />again.</h2><div className="specialty-grid">{specialties.map((item, index) => <a href="#contact" key={item}><span>0{index + 1}</span>{item}<ArrowRight size={15} /></a>)}</div></div>
       </section>
 
-      <section className="contact-section" id="contact">
-        <div className="contact-flower">✦</div><p className="eyebrow">Take the next step</p><h2>You don’t have to<br /><em>figure it out alone.</em></h2><p className="contact-text">Reach out for a complimentary consultation. We’d love to learn more about you and how we can help.</p><a className="button button-light" href="mailto:hello@conejovalleycounseling.com">Get in touch <ArrowRight size={16} /></a>
+      <section id="office" style={{ padding: '5rem 1.5rem', maxWidth: '1200px', margin: '0 auto' }}>
+        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+          <div className="section-label">05 / Our Office</div>
+          <h2>A calm space<br /><em>to begin.</em></h2>
+          <p style={{ maxWidth: '600px', margin: '1.5rem auto', lineHeight: 1.6 }}>
+            My Santa Monica office is a quiet, private space designed to feel calming and grounded — with natural light and an uncluttered environment. Clients often share that the space itself helps them feel more at ease the moment they arrive.
+          </p>
+          <p style={{ marginTop: '1rem' }}>
+            <strong>123 W 45th Street, Santa Monica, CA 90401</strong><br />
+            In-person & telehealth sessions available across California.
+          </p>
+        </div>
+
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gap: '1.5rem',
+        }}>
+          <img src="/office-2.jpg" alt="Calm, private therapy space in Santa Monica" style={{ width: '100%', height: '360px', objectFit: 'cover', borderRadius: '12px' }} />
+          <img src="/office-3.jpg" alt="Natural light and comfortable seating in the office" style={{ width: '100%', height: '360px', objectFit: 'cover', borderRadius: '12px' }} />
+        </div>
       </section>
 
-      <footer className="site-footer"><div><a className="brand footer-brand" href="#top"><span className="brand-mark">CVC</span><span className="brand-name">Conejo Valley<br />Counseling</span></a><p className="footer-note">A thoughtful space for<br />meaningful change.</p></div><div className="footer-links"><div><p className="footer-heading">Explore</p><a href="#about">About</a><a href="#who-we-help">Who we help</a><a href="#expertise">Expertise</a></div><div><p className="footer-heading">Connect</p><a href="#contact">Contact us</a><a href="mailto:hello@conejovalleycounseling.com">Email us</a><a href="#top">Instagram</a></div></div><div className="footer-bottom"><span>© 2026 Conejo Valley Counseling</span><span>Made with care in California</span></div></footer>
+      <section className="contact-section" id="contact">
+        <div className="contact-flower">✦</div><p className="eyebrow">Take the next step</p><h2>Ready to feel more<br /><em>like yourself again?</em></h2><p className="contact-text">Reaching out is often the hardest step. I offer a space where you're respected, understood, and actively involved in your own healing process.</p><a className="button button-light" href="mailto:info@mayareynoldspsyd.com">Book a Consultation <ArrowRight size={16} /></a>
+      </section>
+
+      <footer className="site-footer"><div><a className="brand footer-brand" href="#top"><span className="brand-mark">MR</span><span className="brand-name">Dr. Maya Reynolds<br />PsyD</span></a><p className="footer-note">Anxiety, trauma & burnout<br />therapy in Santa Monica, CA.</p></div><div className="footer-links"><div><p className="footer-heading">Explore</p><a href="#about">About</a><a href="#who-we-help">Services</a><a href="#office">Office</a></div><div><p className="footer-heading">Connect</p><a href="#contact">Contact</a><a href="mailto:info@mayareynoldspsyd.com">Email</a><a href="#top">Instagram</a></div></div><div className="footer-bottom"><span>© 2026 Dr. Maya Reynolds, PsyD</span><span>Santa Monica, California</span></div></footer>
     </main>
   )
 }
