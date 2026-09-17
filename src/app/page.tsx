@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { ArrowRight, ChevronDown, Menu, X } from 'lucide-react'
 
+
 const helpCards = [
   {
     title: 'Anxiety & Panic Therapy',
@@ -63,38 +64,23 @@ export default function Page() {
         <div className="hero-note">Therapy rooted in<br />safety and self-trust <span>✦</span></div>
       </section>
 
-     <section className="intro-section" id="about" style={{ paddingTop: '5rem', paddingBottom: '3rem' }}>
-  <div className="section-label">01 / About Dr. Reynolds</div>
-  <div
-    className="intro-content"
-    style={{
-      display: 'grid',
-      gridTemplateColumns: '280px 1fr',
-      gap: '3.5rem',
-      alignItems: 'center',
-      marginTop: '2rem',
-    }}
-  >
-    <img
-      src="/office-1.jpg"
-      alt="Dr. Maya Reynolds, PsyD"
-      style={{
-        width: '100%',
-        height: '360px',
-        objectFit: 'cover',
-        borderRadius: '16px',
-        boxShadow: '0 12px 30px rgba(0,0,0,0.12)',
-      }}
-    />
-    <div>
-      <h2 style={{ marginBottom: '1.25rem' }}>Warm, grounded,<br /><em>evidence-based care.</em></h2>
-      <p style={{ lineHeight: 1.75, marginBottom: '1.5rem' }}>
-        I'm a licensed clinical psychologist based in Santa Monica, working with adults who feel overwhelmed by anxiety, stress, or the lingering effects of past experiences — often while appearing "functional" on the outside. I integrate CBT, EMDR, mindfulness-based practices, and body-oriented techniques to help you feel more regulated, resilient, and like yourself again.
-      </p>
-      <a className="text-link" href="#contact">Learn more about my approach <ArrowRight size={15} /></a>
-    </div>
-  </div>
-</section>
+      <section className="intro-section about-section" id="about">
+        <div className="section-label">01 / About Dr. Reynolds</div>
+        <div className="intro-content about-grid">
+          <img
+            src="/office-1.jpg"
+            alt="Dr. Maya Reynolds, PsyD"
+            className="about-photo"
+          />
+          <div>
+            <h2 style={{ marginBottom: '1.25rem' }}>Warm, grounded,<br /><em>evidence-based care.</em></h2>
+            <p style={{ lineHeight: 1.75, marginBottom: '1.5rem' }}>
+              I'm a licensed clinical psychologist based in Santa Monica, working with adults who feel overwhelmed by anxiety, stress, or the lingering effects of past experiences — often while appearing "functional" on the outside. I integrate CBT, EMDR, mindfulness-based practices, and body-oriented techniques to help you feel more regulated, resilient, and like yourself again.
+            </p>
+            <a className="text-link" href="#contact">Learn more about my approach <ArrowRight size={15} /></a>
+          </div>
+        </div>
+      </section>
 
       <section className="help-section" id="who-we-help">
         <div className="section-heading">
@@ -125,11 +111,11 @@ export default function Page() {
         <div className="specialties-layout"><h2>A place to begin<br />again.</h2><div className="specialty-grid">{specialties.map((item, index) => <a href="#contact" key={item}><span>0{index + 1}</span>{item}<ArrowRight size={15} /></a>)}</div></div>
       </section>
 
-      <section id="office" style={{ padding: '5rem 1.5rem', maxWidth: '1200px', margin: '0 auto' }}>
-        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+      <section id="office" className="office-section">
+        <div className="office-heading">
           <div className="section-label">05 / Our Office</div>
           <h2>A calm space<br /><em>to begin.</em></h2>
-          <p style={{ maxWidth: '600px', margin: '1.5rem auto', lineHeight: 1.6 }}>
+          <p className="office-desc">
             My Santa Monica office is a quiet, private space designed to feel calming and grounded — with natural light and an uncluttered environment. Clients often share that the space itself helps them feel more at ease the moment they arrive.
           </p>
           <p style={{ marginTop: '1rem' }}>
@@ -138,13 +124,9 @@ export default function Page() {
           </p>
         </div>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: '1.5rem',
-        }}>
-          <img src="/office-2.jpg" alt="Calm, private therapy space in Santa Monica" style={{ width: '100%', height: '360px', objectFit: 'cover', borderRadius: '12px' }} />
-          <img src="/office-3.jpg" alt="Natural light and comfortable seating in the office" style={{ width: '100%', height: '360px', objectFit: 'cover', borderRadius: '12px' }} />
+        <div className="office-grid">
+          <img src="/office-2.jpg" alt="Calm, private therapy space in Santa Monica" className="office-img" />
+          <img src="/office-3.jpg" alt="Natural light and comfortable seating in the office" className="office-img" />
         </div>
       </section>
 
