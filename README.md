@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dr. Maya Reynolds, PsyD — Therapy Website
 
-## Getting Started
+A modern, redesigned homepage for Dr. Maya Reynolds, PsyD — a licensed clinical psychologist based in Santa Monica, CA, specializing in anxiety, trauma (EMDR), and burnout therapy for high-achieving adults.
 
-First, run the development server:
+**Live Site:** [grow-my-therapy-ashen.vercel.app](https://grow-my-therapy-ashen.vercel.app)
+
+This project was built as part of the Grow My Therapy front-end developer internship assignment — cloning an existing therapy website's layout, then redesigning it end-to-end with new content, theme, and images based on a therapist profile.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Next.js 16** (App Router)
+- **TypeScript**
+- **Tailwind CSS** + custom CSS
+- **Lucide React** (icons)
+- Deployed on **Vercel**
+
+---
+
+## ✨ Features
+
+- **Cloned & redesigned homepage** — layout and structure based on [Conejo Valley Counseling](https://www.conejovalleycounseling.com/home), fully rebuilt with new content and theme
+- **Custom color palette** — sage green, warm cream, and terracotta, chosen for a calming, therapy-appropriate feel
+- **Content sourced entirely from Dr. Reynolds' profile** — hero copy, services, about section, and specialties
+- **New "Our Office" section** — highlights the physical practice space with photos and location details, not present in the original template
+- **Fully responsive** — optimized layouts for desktop, tablet, and mobile
+
+---
+
+## 📄 Sections
+
+1. **Hero** — introduces Dr. Reynolds' specialty and a clear call-to-action
+2. **About** — therapist bio and approach (CBT, EMDR, mindfulness, body-oriented techniques)
+3. **Services** — Anxiety & Panic Therapy, Trauma Therapy (EMDR), Burnout & Stress Therapy
+4. **Approach** — how sessions are structured
+5. **Areas of Focus** — specialty tags
+6. **Our Office** *(new section)* — office photos, address, and session availability
+7. **Contact** — consultation booking CTA
+
+---
+
+## 🚀 Running Locally
 
 ```bash
+git clone https://github.com/HARSHITAPALIWAL2/grow-my-therapy.git
+cd grow-my-therapy
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Deployment
 
-## Learn More
+Deployed on Vercel with automatic deployments from the `main` branch.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🤖 AI Tools Used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project was built with the assistance of AI tools (v0.dev for initial component scaffolding, Claude for content structuring, debugging, and copywriting guidance), with all output manually reviewed and refined.
